@@ -1,0 +1,136 @@
+# Creado por https://www.toptal.com/developers/gitignore/api/androidstudio
+# Editar en https://www.toptal.com/developers/gitignore?templates=androidstudio
+
+### Estudio de Android ###
+# Cubre los archivos que se ignorarán para el desarrollo de Android usando Android Studio.
+
+# Archivos de aplicación construidos
+*.apk
+*.ap_
+*.aab
+
+# Archivos para ART/Dalvik VM
+*.dex
+
+# archivos de clase Java
+*.clase
+
+# archivos generados
+compartimiento/
+generación/
+afuera/
+
+# archivos Gradle
+Gradle
+.gradle/
+construir/
+
+# Firma de archivos
+.firma/
+
+# Archivo de configuración local (ruta SDK, etc.)
+propiedades.locales
+
+# Carpeta Proguard generada por Eclipse
+proguard/
+
+# Archivos de registro
+*.Iniciar sesión
+
+#Estudio de Android
+/*/construir/
+/*/local.properties
+/*/afuera
+/*/*/construir
+/*/*/producción
+capturas/
+.navegación/
+*.ipr
+*~
+*.swp
+
+# Archivos de almacén de claves
+*.jks
+*.almacén de claves
+
+# Servicios de Google (por ejemplo, API o Firebase)
+#servicios-google.json
+
+# parche de Android
+gen-external-apklibs
+
+# Carpeta de compilación nativa externa generada en Android Studio 2.2 y versiones posteriores
+.externalNativeBuild
+
+#NDK
+objeto/
+
+# IDEA IntelliJ
+*.iml
+*.iws
+/afuera/
+
+# Configuraciones específicas del usuario
+.idea/cachés/
+.idea/bibliotecas/
+.idea/estante/
+.idea/espacio de trabajo.xml
+.idea/tareas.xml
+.idea/.nombre
+.idea/compilador.xml
+.idea/copyright/profiles_settings.xml
+.idea/codificaciones.xml
+.idea/misc.xml
+.idea/modulos.xml
+.idea/scopes/scope_settings.xml
+.idea/diccionarios
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+.idea/fuentes de datos.xml
+.idea/fuentes de datos.ids
+.idea/sqlDataSources.xml
+.idea/dinámica.xml
+.idea/uiDesigner.xml
+.idea/assetWizardSettings.xml
+.idea/gradle.xml
+.idea/jarRepositories.xml
+.idea/navEditor.xml
+
+# Archivos de proyecto heredados de Eclipse
+.classpath
+.proyecto
+.cproyecto
+.ajustes/
+
+# Herramientas móviles para Java (J2ME)
+.mtj.tmp/
+
+# Archivos del paquete #
+*.guerra
+*.oído
+
+# registros de fallas de la máquina virtual (Referencia: http://www.java.com/en/download/help/error_hotspot.xml)
+hs_err_pid*
+
+## Archivos específicos del complemento:
+
+# Complemento mpeltonen/sbt-idea
+.idea_modules/
+
+# Complemento JIRA
+atlassian-ide-plugin.xml
+
+# Complemento Mongo Explorer
+.idea/mongoSettings.xml
+
+# Complemento Crashlytics (para Android Studio e IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.propiedades
+crashlytics-build.propiedades
+tela.propiedades
+
+### Parche de AndroidStudio ###
+
+!/gradle/envoltura/gradle-envoltura.jar
+
+# Fin de https://www.toptal.com/developers/gitignore/api/androidstudio

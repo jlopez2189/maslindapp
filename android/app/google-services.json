@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "298821410503",
+    "project_id": "maslinda-app-centinell",
+    "storage_bucket": "maslinda-app-centinell.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298821410503:android:f9dd9a4b36eed40a5ea8e2",
+        "android_client_info": {
+          "package_name": "com.centinell.maslindapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298821410503-5096p6ueodd0ev4p2jie4bokvcrpkbqe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.centinell.maslindapp",
+            "certificate_hash": "0ff1cce57c308e6897a3eedb48f193a309550346"
+          }
+        },
+        {
+          "client_id": "298821410503-8a75mpum4orjlurr4q9gopcnpujagh8d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6SVnk_EylMelSOXEp2b2nPILE29MBP8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298821410503-8a75mpum4orjlurr4q9gopcnpujagh8d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

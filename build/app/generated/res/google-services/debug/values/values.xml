@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">298821410503-8a75mpum4orjlurr4q9gopcnpujagh8d.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">298821410503</string>
+    <string name="google_api_key" translatable="false">AIzaSyA6SVnk_EylMelSOXEp2b2nPILE29MBP8U</string>
+    <string name="google_app_id" translatable="false">1:298821410503:android:f9dd9a4b36eed40a5ea8e2</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA6SVnk_EylMelSOXEp2b2nPILE29MBP8U</string>
+    <string name="google_storage_bucket" translatable="false">maslinda-app-centinell.appspot.com</string>
+    <string name="project_id" translatable="false">maslinda-app-centinell</string>
+</resources>
