@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:maslindapp/src/models/response_api.dart';
 import 'package:maslindapp/src/models/user.dart';
 import 'package:maslindapp/src/provider/categories_provider.dart';
 import 'package:maslindapp/src/utils/my_snackbar.dart';
@@ -39,7 +38,7 @@ class SalonProductsCreateController {
     _categoriesProvider.init(context, user);
     getCategories();
   }
-
+  /// llamado de la combobok categorias
   void getCategories() async {
    categories = await _categoriesProvider.getAll();
    refresh();
