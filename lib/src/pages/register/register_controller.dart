@@ -104,7 +104,6 @@ class RegisterController {
     refresh();
    }
 
-
   void showAlertDialog() {
     Widget galleryButton = ElevatedButton(
         onPressed: (){

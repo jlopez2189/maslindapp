@@ -104,6 +104,11 @@ class _SalonOrdersListPageState extends State<SalonOrdersListPage> {
             title: Text('Crear Categoria'),
             trailing: Icon(Icons.list_alt),
           ),
+          ListTile(
+            onTap: _con.gotoProductsCreate,
+            title: Text('Crear Producto'),
+            trailing: Icon(Icons.production_quantity_limits),
+          ),
           _con.user != null ?
           _con.user.roles.length > 1 ?
           ListTile(

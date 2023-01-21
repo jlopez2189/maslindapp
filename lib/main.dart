@@ -7,6 +7,7 @@ import 'package:maslindapp/src/pages/register/register_page.dart';
 import 'package:maslindapp/src/pages/roles/roles_page.dart';
 import 'package:maslindapp/src/pages/salon/categories/create/salon_categories_create_page.dart';
 import 'package:maslindapp/src/pages/salon/orders/list/salon_orders_list_page.dart';
+import 'package:maslindapp/src/pages/salon/products/create/salon_products_create_page.dart';
 import 'package:maslindapp/src/utils/my_colors.dart';
 import 'package:flutter/src/widgets/navigator.dart';
 
@@ -36,6 +37,7 @@ class _MyAppState extends State<MyApp> {
        'client/update' : (BuildContext context) => ClientUpdatePage(),
        'salon/orders/list' : (BuildContext context) => SalonOrdersListPage(),
        'salon/categories/create' : (BuildContext context) => SalonCategoriesCreatePage(),
+       'salon/products/create' : (BuildContext context) => SalonProductsCreatePage(),
        'delivery/orders/list' : (BuildContext context) => DeliveryOrdersListPage()
      },
      theme: ThemeData(

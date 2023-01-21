@@ -107,6 +107,13 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_masked_text">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_masked_text-0.8.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter_plugin_android_lifecycle">
           <value>
             <list>
@@ -418,6 +425,7 @@
       <root url="file://$PROJECT_DIR$/../../../../AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/ffi-2.0.1/lib" />
       <root url="file://$PROJECT_DIR$/../../../../AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.4/lib" />
       <root url="file://$PROJECT_DIR$/../../../../AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-2.0.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_masked_text-0.8.0/lib" />
       <root url="file://$PROJECT_DIR$/../../../../AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.7/lib" />
       <root url="file://$PROJECT_DIR$/../../../../AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.1.2/lib" />
       <root url="file://$PROJECT_DIR$/../../../../AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.5/lib" />
