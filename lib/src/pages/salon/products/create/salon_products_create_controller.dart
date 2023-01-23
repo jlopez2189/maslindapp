@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:maslindapp/src/models/product.dart';
 import 'package:maslindapp/src/models/user.dart';
 import 'package:maslindapp/src/provider/categories_provider.dart';
 import 'package:maslindapp/src/utils/my_snackbar.dart';
@@ -57,11 +58,21 @@ class SalonProductsCreateController {
       MySnackbar.show(context, 'Selecciona las 3 imagenes');
       return;
     }
-
+     //validacion de catalogo de categorias
     if (idCategory == null) {
       MySnackbar.show(context, 'Selecciona una categoria para el producto');
       return;
     }
+
+    Product product = new Product(
+      name: name,
+      description: descripcion,
+      precio: precio,
+      idCategory: int.parse(idCategory)
+    );
+    
+    print('Formulario Producto: ${product.toJson()}');
+
 
 
 
