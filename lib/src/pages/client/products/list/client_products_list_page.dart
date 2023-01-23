@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:maslindapp/src/models/category.dart';
+import 'package:maslindapp/src/models/product.dart';
 import 'package:maslindapp/src/pages/client/products/list/client_products_list_controller.dart';
+import 'package:maslindapp/src/widgets/no_data_widgets.dart';
 class ClientProductsListPage extends StatefulWidget {
   const ClientProductsListPage({Key key}) : super(key: key);
 
@@ -63,13 +65,118 @@ class _ClientProductsListPageState extends State<ClientProductsListPage> {
         drawer: _drawer(),
         body: TabBarView(
           children: _con.categories.map((Category category) {
-            return Text('Hola');
+            return FutureBuilder(
+              future: _con.getProducts(category.id),
+                builder: (context, AsyncSnapshot<List<Product>> snapshot){
+
+                if (snapshot.hasData) {
+                   if(snapshot.data.length > 0) {
+                     return GridView.builder(
+                         padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                             crossAxisCount: 2,
+                             childAspectRatio: 0.6
+                         ),
+                         itemCount: snapshot.data?.length ?? 0,
+                         itemBuilder: (_, index) {
+                           return _cardProduct(snapshot.data[index]);
+                         }
+                     );
+                   }
+                   else
+                     {
+                       return NoDataWidget(text: 'No hay productos');
+                     }
+                }
+                else
+                {
+                  return NoDataWidget(text: 'No hay productos');
+                }
+                }
+            );
           }).toList(),
         ),
 
         ),
     );
 
+  }
+
+  Widget _cardProduct(Product product) {
+    return Container(
+      height: 250,
+      child: Card(
+        elevation: 3.0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15)
+        ) ,
+        child: Stack(
+          children: [
+            Positioned(
+              top: -1.0,
+                right: -1.0,
+                child: Container(
+                  height: 35,
+                  width: 35,
+                  decoration: BoxDecoration(
+                    color: Colors.red[400],
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(15),
+                      topRight: Radius.circular(20),
+                    )
+                  ),
+                  child: Icon(Icons.add, color: Colors.white,),
+                )
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+               Container(
+                 height: 150,
+                 margin: EdgeInsets.only(top: 15),
+                 width: MediaQuery.of(context).size.width * 0.45,
+                 padding: EdgeInsets.all(20),
+                 child: FadeInImage(
+                   image: product.image1 != null
+                   ? NetworkImage(product.image1)
+                   : AssetImage('assets/img/no-image.png'),
+                   fit: BoxFit.contain,
+                   fadeInDuration: Duration(milliseconds: 50),
+                   placeholder: AssetImage('assets/img/no-image.png'),
+                 ),
+               ),
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  height: 50,
+                  child: Text(
+                    product.name ?? '',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontFamily: 'NimbusSans'
+                    ),
+                  ),
+                ),
+                Spacer(),
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                  child: Text(
+                    '${product.precio ?? 0}\$',
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                        fontFamily: 'NimbusSans'
+                    ),
+                  ),
+                )
+
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 
   Widget _shoppingBag() {

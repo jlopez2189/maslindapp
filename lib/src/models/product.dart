@@ -14,6 +14,7 @@ class Product {
   double precio;
   int idCategory;
   int quantity;
+  List<Product> toList = [];
   Product({
      this.id,
      this.name,
@@ -24,19 +25,28 @@ class Product {
      this.precio,
      this.idCategory,
      this.quantity,
+
   });
 
   factory Product.fromJson(Map<String, dynamic> json) => Product(
-    id: json["id"],
+    id: json["id"] is int ? json["id"].toString() : json['id'],
     name: json["name"],
     description: json["description"],
     image1: json["image1"],
     image2: json["image2"],
     image3: json["image3"],
-    precio: json["precio"]?.toDouble(),
-    idCategory: json["id_category"],
+    precio: json['precio'] is String ? double.parse(json["precio"]): isInteger(json["precio"]) ? json["precio"].toDouble() : json['precio'],
+    idCategory: json["id_category"] is String ? int.parse(json["id_category"]) : json["id_category"],
     quantity: json["quantity"],
   );
+
+  Product.fromJsonList(List<dynamic> jsonList) {
+    if (jsonList == null) return;
+    jsonList.forEach((item) {
+      Product product = Product.fromJson(item);
+      toList.add(product);
+    });
+  }
 
   Map<String, dynamic> toJson() => {
     "id": id,
@@ -49,4 +59,7 @@ class Product {
     "id_category": idCategory,
     "quantity": quantity,
   };
+
+  static bool isInteger(num value) => value is int || value == value.roundToDouble();
+
 }
