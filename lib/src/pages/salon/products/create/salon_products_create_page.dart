@@ -255,7 +255,7 @@ class _SalonProductsCreatePageState extends State<SalonProductsCreatePage> {
       width: double.infinity,
       margin: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: _con.createProduct,
         child: Text(
           'Registrar Producto',
           style: TextStyle(
