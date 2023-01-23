@@ -82,7 +82,8 @@ class SalonProductsCreateController {
     images.add(imageFile1);
     images.add(imageFile2);
     images.add(imageFile3);
-    
+
+    // mensajes //
     
     _progressDialog.show(max: 100, msg: 'Espere un momento');
     Stream stream = await _productsProvider.create(product, images);
