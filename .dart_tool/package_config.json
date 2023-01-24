@@ -20,6 +20,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "carousel_slider",
+      "rootUri": "file:///C:/AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/carousel_slider-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.6"
+    },
+    {
       "name": "characters",
       "rootUri": "file:///C:/AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.1",
       "packageUri": "lib/",
@@ -84,6 +90,12 @@
       "rootUri": "file:///C:/AppCentinell/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "flutter_image_slideshow",
+      "rootUri": "file:///C:/AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_image_slideshow-0.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "flutter_lints",
@@ -186,6 +198,12 @@
       "rootUri": "file:///C:/AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "modal_bottom_sheet",
+      "rootUri": "file:///C:/AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/modal_bottom_sheet-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "path",
@@ -356,7 +374,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2023-01-21T16:20:03.886556Z",
+  "generated": "2023-01-23T22:53:15.590659Z",
   "generator": "pub",
   "generatorVersion": "2.18.0"
 }

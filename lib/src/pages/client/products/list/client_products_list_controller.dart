@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:maslindapp/src/models/category.dart';
 import 'package:maslindapp/src/models/product.dart';
 import 'package:maslindapp/src/models/user.dart';
+import 'package:maslindapp/src/pages/client/products/detail/client_product_detail_page.dart';
 import 'package:maslindapp/src/provider/categories_provider.dart';
 import 'package:maslindapp/src/provider/products_provider.dart';
 import 'package:maslindapp/src/utils/shared_pref.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class ClientProductsListController {
   BuildContext context;
@@ -31,6 +33,13 @@ class ClientProductsListController {
     return await _productsProvider.getByCategory(idCategory);
   }
 
+  void openBottonSheet(Product product) {
+    showMaterialModalBottomSheet(
+        context: context,
+        builder: (context) => ClientProductDetailPage(product: product)
+    );
+  }
+
   void getCategories() async {
     categories =  await _categoriesProvider.getAll();
     refresh();
@@ -46,6 +55,10 @@ class ClientProductsListController {
 
   void goToUpdatePage() {
     Navigator.pushNamed(context, 'client/update');
+  }
+
+  void goToOrderCreatePage() {
+    Navigator.pushNamed(context, 'client/orders/create');
   }
   
   void gotoRoles() {

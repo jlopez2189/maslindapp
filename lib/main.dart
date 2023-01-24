@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:maslindapp/src/pages/client/address/create/client_address_create_page.dart';
+import 'package:maslindapp/src/pages/client/address/list/client_address_list_page.dart';
+import 'package:maslindapp/src/pages/client/address/map/client_address_map_page.dart';
+import 'package:maslindapp/src/pages/client/orders/create/client_order_create_page.dart';
 import 'package:maslindapp/src/pages/client/products/list/client_products_list_page.dart';
 import 'package:maslindapp/src/pages/client/update/client_update_page.dart';
 import 'package:maslindapp/src/pages/delivery/orders/list/delivery_orders_list_page.dart';
@@ -9,7 +13,6 @@ import 'package:maslindapp/src/pages/salon/categories/create/salon_categories_cr
 import 'package:maslindapp/src/pages/salon/orders/list/salon_orders_list_page.dart';
 import 'package:maslindapp/src/pages/salon/products/create/salon_products_create_page.dart';
 import 'package:maslindapp/src/utils/my_colors.dart';
-import 'package:flutter/src/widgets/navigator.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,6 +38,10 @@ class _MyAppState extends State<MyApp> {
        'roles' : (BuildContext context) => RolesPage(),
        'client/products/list' : (BuildContext context) => ClientProductsListPage(),
        'client/update' : (BuildContext context) => ClientUpdatePage(),
+       'client/orders/create' : (BuildContext context) => ClientOrdersCreatePage(),
+       'client/address/list' : (BuildContext context) => ClientAddressListPage(),
+       'client/address/create' : (BuildContext context) => ClientAddressCreatePage(),
+       'client/address/map' : (BuildContext context) => ClientAddressMapPage(),
        'salon/orders/list' : (BuildContext context) => SalonOrdersListPage(),
        'salon/categories/create' : (BuildContext context) => SalonCategoriesCreatePage(),
        'salon/products/create' : (BuildContext context) => SalonProductsCreatePage(),

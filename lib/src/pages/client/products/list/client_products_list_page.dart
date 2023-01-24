@@ -103,106 +103,114 @@ class _ClientProductsListPageState extends State<ClientProductsListPage> {
   }
 
   Widget _cardProduct(Product product) {
-    return Container(
-      height: 250,
-      child: Card(
-        elevation: 3.0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15)
-        ) ,
-        child: Stack(
-          children: [
-            Positioned(
-              top: -1.0,
-                right: -1.0,
-                child: Container(
-                  height: 35,
-                  width: 35,
-                  decoration: BoxDecoration(
-                    color: Colors.red[400],
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(15),
-                      topRight: Radius.circular(20),
-                    )
-                  ),
-                  child: Icon(Icons.add, color: Colors.white,),
-                )
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-               Container(
-                 height: 150,
-                 margin: EdgeInsets.only(top: 15),
-                 width: MediaQuery.of(context).size.width * 0.45,
-                 padding: EdgeInsets.all(20),
-                 child: FadeInImage(
-                   image: product.image1 != null
-                   ? NetworkImage(product.image1)
-                   : AssetImage('assets/img/no-image.png'),
-                   fit: BoxFit.contain,
-                   fadeInDuration: Duration(milliseconds: 50),
-                   placeholder: AssetImage('assets/img/no-image.png'),
+    return GestureDetector(
+      onTap: () {
+        _con.openBottonSheet(product);
+      } ,
+      child: Container(
+        height: 250,
+        child: Card(
+          elevation: 3.0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15)
+          ) ,
+          child: Stack(
+            children: [
+              Positioned(
+                top: -1.0,
+                  right: -1.0,
+                  child: Container(
+                    height: 35,
+                    width: 35,
+                    decoration: BoxDecoration(
+                      color: Colors.red[400],
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(15),
+                        topRight: Radius.circular(20),
+                      )
+                    ),
+                    child: Icon(Icons.add, color: Colors.white,),
+                  )
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                 Container(
+                   height: 150,
+                   margin: EdgeInsets.only(top: 15),
+                   width: MediaQuery.of(context).size.width * 0.45,
+                   padding: EdgeInsets.all(20),
+                   child: FadeInImage(
+                     image: product.image1 != null
+                     ? NetworkImage(product.image1)
+                     : AssetImage('assets/img/no-image.png'),
+                     fit: BoxFit.contain,
+                     fadeInDuration: Duration(milliseconds: 50),
+                     placeholder: AssetImage('assets/img/no-image.png'),
+                   ),
                  ),
-               ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 20),
-                  height: 50,
-                  child: Text(
-                    product.name ?? '',
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontFamily: 'NimbusSans'
-                    ),
-                  ),
-                ),
-                Spacer(),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                  child: Text(
-                    '${product.precio ?? 0}\$',
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 20),
+                    height: 50,
+                    child: Text(
+                      product.name ?? '',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 15,
                         fontFamily: 'NimbusSans'
+                      ),
                     ),
                   ),
-                )
+                  Spacer(),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                    child: Text(
+                      '${product.precio ?? 0}\$',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                          fontFamily: 'NimbusSans'
+                      ),
+                    ),
+                  )
 
-              ],
-            )
-          ],
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
   }
 
   Widget _shoppingBag() {
-    return Stack(
-      children: [
-        Container(
-          margin: EdgeInsets.only(right: 15, top: 13),
-          child: Icon(
-              Icons.shopping_bag_outlined,
-            color: Colors.black,
+    return GestureDetector(
+      onTap: _con.goToOrderCreatePage,
+      child: Stack(
+        children: [
+          Container(
+            margin: EdgeInsets.only(right: 15, top: 13),
+            child: Icon(
+                Icons.shopping_bag_outlined,
+              color: Colors.black,
+            ),
           ),
-        ),
-        Positioned(
-          right: 16,
-          top: 15,
+          Positioned(
+            right: 16,
+            top: 15,
 
-            child: Container(
-              width: 9,
-              height: 9,
-              decoration: BoxDecoration(
-                color: Colors.green,
-                borderRadius: BorderRadius.all(Radius.circular(30))
-              ),
-            )
-        )
-      ],
+              child: Container(
+                width: 9,
+                height: 9,
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.all(Radius.circular(30))
+                ),
+              )
+          )
+        ],
+      ),
     );
   }
 
