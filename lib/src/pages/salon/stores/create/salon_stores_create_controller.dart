@@ -85,12 +85,8 @@ class SalonStoresCreateController {
         imageFile3 = null;
         refresh();
       }
-
-
     });
-
-    print('Formulario Producto: ${stores.toJson()}');
-
+    print('Formulario Tienda: ${stores.toJson()}');
   }
 
   void resetValues() {

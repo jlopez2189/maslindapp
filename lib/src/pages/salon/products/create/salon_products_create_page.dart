@@ -263,7 +263,7 @@ class _SalonProductsCreatePageState extends State<SalonProductsCreatePage> {
           ),
         ),
         style: ElevatedButton.styleFrom(
-            primary: Colors.black,
+            primary: Colors.green[500],
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30)
             ),

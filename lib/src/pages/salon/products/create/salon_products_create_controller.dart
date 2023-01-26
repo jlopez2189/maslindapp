@@ -85,11 +85,12 @@ class SalonProductsCreateController {
 
     // mensajes //
     
-    _progressDialog.show(max: 100, msg: 'Espere un momento');
+   /// _progressDialog.show(max: 100, msg: 'Espere un momento');
     Stream stream = await _productsProvider.create(product, images);
     stream.listen((res) {
      _progressDialog.close();
      ResponseApi responseApi = ResponseApi.fromJson(json.decode(res));
+     print('Respuesta: ${responseApi.toJson()}');
      MySnackbar.show(context, responseApi.message);
      if (responseApi.success) {
        ///resetValues();
@@ -103,9 +104,7 @@ class SalonProductsCreateController {
         refresh();
      }
     });
-    
     print('Formulario Producto: ${product.toJson()}');
-
   }
   void resetValues() {
     nameController.text = '';

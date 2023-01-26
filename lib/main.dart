@@ -7,6 +7,7 @@ import 'package:maslindapp/src/pages/client/products/list/client_products_list_p
 import 'package:maslindapp/src/pages/client/update/client_update_page.dart';
 import 'package:maslindapp/src/pages/delivery/orders/list/delivery_orders_list_page.dart';
 import 'package:maslindapp/src/pages/login/login_page.dart';
+import 'package:maslindapp/src/pages/login/splash_screen.dart';
 import 'package:maslindapp/src/pages/register/register_page.dart';
 import 'package:maslindapp/src/pages/roles/roles_page.dart';
 import 'package:maslindapp/src/pages/salon/categories/create/salon_categories_create_page.dart';
@@ -34,7 +35,8 @@ class _MyAppState extends State<MyApp> {
      debugShowCheckedModeBanner: false,
      initialRoute: 'login',
      routes: {
-       'login' : (BuildContext context) => LoginPage(),
+       ///'login' : (BuildContext context) => LoginPage(),
+       'login' : (BuildContext context) => SplashScreen(),
        'register' : (BuildContext context) => RegisterPage(),
        'roles' : (BuildContext context) => RolesPage(),
        'client/products/list' : (BuildContext context) => ClientProductsListPage(),
