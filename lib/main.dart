@@ -12,6 +12,7 @@ import 'package:maslindapp/src/pages/roles/roles_page.dart';
 import 'package:maslindapp/src/pages/salon/categories/create/salon_categories_create_page.dart';
 import 'package:maslindapp/src/pages/salon/orders/list/salon_orders_list_page.dart';
 import 'package:maslindapp/src/pages/salon/products/create/salon_products_create_page.dart';
+import 'package:maslindapp/src/pages/salon/stores/create/salon_stores_create_page.dart';
 import 'package:maslindapp/src/utils/my_colors.dart';
 
 void main() {
@@ -44,6 +45,7 @@ class _MyAppState extends State<MyApp> {
        'client/address/map' : (BuildContext context) => ClientAddressMapPage(),
        'salon/orders/list' : (BuildContext context) => SalonOrdersListPage(),
        'salon/categories/create' : (BuildContext context) => SalonCategoriesCreatePage(),
+       'salon/stores/create' : (BuildContext context) => SalonStoresCreatePage(),
        'salon/products/create' : (BuildContext context) => SalonProductsCreatePage(),
        'delivery/orders/list' : (BuildContext context) => DeliveryOrdersListPage()
      },

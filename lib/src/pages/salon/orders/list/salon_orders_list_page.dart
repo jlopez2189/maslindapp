@@ -100,6 +100,11 @@ class _SalonOrdersListPageState extends State<SalonOrdersListPage> {
               )
           ),
           ListTile(
+            onTap: _con.gotoStoresCreate,
+            title: Text('Crear Tienda'),
+            trailing: Icon(Icons.store),
+          ),
+          ListTile(
             onTap: _con.gotoCategoriesCreate,
             title: Text('Crear Categoria'),
             trailing: Icon(Icons.list_alt),

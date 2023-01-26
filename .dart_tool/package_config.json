@@ -134,6 +134,30 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "google_maps_flutter",
+      "rootUri": "file:///C:/AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-2.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "google_maps_flutter_android",
+      "rootUri": "file:///C:/AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter_android-2.4.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "google_maps_flutter_ios",
+      "rootUri": "file:///C:/AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter_ios-2.1.13",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "google_maps_flutter_platform_interface",
+      "rootUri": "file:///C:/AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter_platform_interface-2.2.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "http",
       "rootUri": "file:///C:/AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.5",
       "packageUri": "lib/",
@@ -326,6 +350,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "stream_transform",
+      "rootUri": "file:///C:/AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/stream_transform-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "string_scanner",
       "rootUri": "file:///C:/AppCentinell/flutter/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.1.1",
       "packageUri": "lib/",
@@ -374,7 +404,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2023-01-23T22:53:15.590659Z",
+  "generated": "2023-01-25T20:13:09.295750Z",
   "generator": "pub",
   "generatorVersion": "2.18.0"
 }

@@ -24,13 +24,21 @@ class _RolesPageState extends State<RolesPage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.amber,
         title: Text(
-          'Selecciona un Rol'),
+          'Selecciona un Rol',
+           style: TextStyle(
+             color: Colors.black,
+             fontWeight: FontWeight.bold,
+
+           ),
+        ),
       ),
       body: Container(
         // Centralizacion de las imagenes de los roles
-        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.14),
+        margin: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.05),
         child: ListView(
           children:
             _con.user != null ? _con.user.roles.map((Rol rol) {
@@ -46,10 +54,10 @@ class _RolesPageState extends State<RolesPage> {
        _con.gotoPage(rol.route);
      },
      child: Column(
-       children: [
+        children: [
          Container(
-           height: 100,
-           child: FadeInImage(
+           height: 120,
+            child: FadeInImage(
             image: rol.image != null ? NetworkImage(rol.image)
                                       : AssetImage('assets/img/no-image.png'),
              fit: BoxFit.contain,
@@ -57,11 +65,12 @@ class _RolesPageState extends State<RolesPage> {
              placeholder: AssetImage('assets/img/no-image.png'),
             ),
          ),
-         SizedBox(height: 20),
+         SizedBox(height: 25),
          Text(
            rol.name ?? '',
            style: TextStyle(
-             fontSize: 16,
+             fontSize: 17,
+             fontFamily: 'Roboto',
              color: Colors.black
            ),
          ),

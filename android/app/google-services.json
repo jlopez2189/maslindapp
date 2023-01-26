@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "298821410503",
-    "project_id": "maslinda-app-centinell",
-    "storage_bucket": "maslinda-app-centinell.appspot.com"
+    "project_number": "301777031509",
+    "project_id": "centinell-app-efd57",
+    "storage_bucket": "centinell-app-efd57.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:298821410503:android:f9dd9a4b36eed40a5ea8e2",
+        "mobilesdk_app_id": "1:301777031509:android:ee2540b843fee681ef9fdc",
         "android_client_info": {
           "package_name": "com.centinell.maslindapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "298821410503-5096p6ueodd0ev4p2jie4bokvcrpkbqe.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.centinell.maslindapp",
-            "certificate_hash": "0ff1cce57c308e6897a3eedb48f193a309550346"
-          }
-        },
-        {
-          "client_id": "298821410503-8a75mpum4orjlurr4q9gopcnpujagh8d.apps.googleusercontent.com",
+          "client_id": "301777031509-vs76rloefm7qtojp0me1m9msh7jfr5td.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA6SVnk_EylMelSOXEp2b2nPILE29MBP8U"
+          "current_key": "AIzaSyCHSnt6hR80h4Kbjmn1KGhMYgJhGx4A3c8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "298821410503-8a75mpum4orjlurr4q9gopcnpujagh8d.apps.googleusercontent.com",
+              "client_id": "301777031509-vs76rloefm7qtojp0me1m9msh7jfr5td.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

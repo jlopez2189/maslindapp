@@ -18,81 +18,125 @@
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 16-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-80
 16-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-77
-17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Include required permissions for Google Maps API to run. -->
 17-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-81
 17-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-78
-18
-19    <application
-20        android:name="android.app.Application"
-21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.6.0] C:\Users\jlopez\.gradle\caches\transforms-3\c56ad48b6332c33d7637f077ac1b9e39\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
-22        android:debuggable="true"
-23        android:icon="@mipmap/ic_launcher"
-24        android:label="maslindapp"
-25        android:usesCleartextTraffic="true" >
-26        <activity
-27            android:name="com.centinell.maslindapp.MainActivity"
-28            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-29            android:exported="true"
-30            android:hardwareAccelerated="true"
-31            android:launchMode="singleTop"
-32            android:theme="@style/LaunchTheme"
-33            android:windowSoftInputMode="adjustResize" >
-34
-35            <!--
-36                 Specifies an Android theme to apply to this Activity as soon as
-37                 the Android process has started. This theme is visible to the user
-38                 while the Flutter UI initializes. After that, this theme continues
-39                 to determine the Window background behind the Flutter UI.
-40            -->
-41            <meta-data
-42                android:name="io.flutter.embedding.android.NormalTheme"
-43                android:resource="@style/NormalTheme" />
-44
-45            <intent-filter>
-46                <action android:name="android.intent.action.MAIN" />
-47
-48                <category android:name="android.intent.category.LAUNCHER" />
-49            </intent-filter>
-50        </activity>
-51        <!--
-52             Don't delete the meta-data below.
-53             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-54        -->
-55        <meta-data
-56            android:name="flutterEmbedding"
-57            android:value="2" />
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\jlopez\.gradle\caches\transforms-3\e46a318ffbc75b42c560c1e26eb1ab0c\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:23:5-79
+18-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\jlopez\.gradle\caches\transforms-3\e46a318ffbc75b42c560c1e26eb1ab0c\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:23:22-76
+19
+20    <uses-feature
+20-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\jlopez\.gradle\caches\transforms-3\e46a318ffbc75b42c560c1e26eb1ab0c\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:26:5-28:35
+21        android:glEsVersion="0x00020000"
+21-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\jlopez\.gradle\caches\transforms-3\e46a318ffbc75b42c560c1e26eb1ab0c\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:27:9-41
+22        android:required="true" />
+22-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\jlopez\.gradle\caches\transforms-3\e46a318ffbc75b42c560c1e26eb1ab0c\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:28:9-32
+23
+24    <queries>
+24-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\jlopez\.gradle\caches\transforms-3\e46a318ffbc75b42c560c1e26eb1ab0c\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:30:5-34:15
+25
+26        <!-- Needs to be explicitly declared on Android R+ -->
+27        <package android:name="com.google.android.apps.maps" />
+27-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\jlopez\.gradle\caches\transforms-3\e46a318ffbc75b42c560c1e26eb1ab0c\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:9-64
+27-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\jlopez\.gradle\caches\transforms-3\e46a318ffbc75b42c560c1e26eb1ab0c\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:18-61
+28    </queries>
+29
+30    <application
+31        android:name="android.app.Application"
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.6.0] C:\Users\jlopez\.gradle\caches\transforms-3\c56ad48b6332c33d7637f077ac1b9e39\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+33        android:debuggable="true"
+34        android:icon="@mipmap/ic_launcher"
+35        android:label="maslindapp"
+36        android:usesCleartextTraffic="true" >
+37        <activity
+38            android:name="com.centinell.maslindapp.MainActivity"
+39            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+40            android:exported="true"
+41            android:hardwareAccelerated="true"
+42            android:launchMode="singleTop"
+43            android:theme="@style/LaunchTheme"
+44            android:windowSoftInputMode="adjustResize" >
+45
+46            <!--
+47                 Specifies an Android theme to apply to this Activity as soon as
+48                 the Android process has started. This theme is visible to the user
+49                 while the Flutter UI initializes. After that, this theme continues
+50                 to determine the Window background behind the Flutter UI.
+51            -->
+52            <meta-data
+53                android:name="io.flutter.embedding.android.NormalTheme"
+54                android:resource="@style/NormalTheme" />
+55
+56            <intent-filter>
+57                <action android:name="android.intent.action.MAIN" />
 58
-59        <provider
-59-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:13:9-21:20
-60            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-60-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-82
-61            android:authorities="com.centinell.maslindapp.flutter.image_provider"
-61-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-74
-62            android:exported="false"
-62-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-37
-63            android:grantUriPermissions="true" >
-63-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-47
-64            <meta-data
-64-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-20:75
-65                android:name="android.support.FILE_PROVIDER_PATHS"
-65-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:19:17-67
-66                android:resource="@xml/flutter_image_picker_file_paths" />
-66-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:20:17-72
-67        </provider>
-68
-69        <uses-library
-69-->[androidx.window:window:1.0.0-beta04] C:\Users\jlopez\.gradle\caches\transforms-3\6c0248871a11733f9c854e908ae7f76f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-70            android:name="androidx.window.extensions"
-70-->[androidx.window:window:1.0.0-beta04] C:\Users\jlopez\.gradle\caches\transforms-3\6c0248871a11733f9c854e908ae7f76f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-71            android:required="false" />
-71-->[androidx.window:window:1.0.0-beta04] C:\Users\jlopez\.gradle\caches\transforms-3\6c0248871a11733f9c854e908ae7f76f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-72        <uses-library
-72-->[androidx.window:window:1.0.0-beta04] C:\Users\jlopez\.gradle\caches\transforms-3\6c0248871a11733f9c854e908ae7f76f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-73            android:name="androidx.window.sidecar"
-73-->[androidx.window:window:1.0.0-beta04] C:\Users\jlopez\.gradle\caches\transforms-3\6c0248871a11733f9c854e908ae7f76f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-74            android:required="false" />
-74-->[androidx.window:window:1.0.0-beta04] C:\Users\jlopez\.gradle\caches\transforms-3\6c0248871a11733f9c854e908ae7f76f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-75    </application>
-76
-77</manifest>
+59                <category android:name="android.intent.category.LAUNCHER" />
+60            </intent-filter>
+61        </activity>
+62        <!--
+63             Don't delete the meta-data below.
+64             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+65        -->
+66        <meta-data
+67            android:name="flutterEmbedding"
+68            android:value="2" />
+69        <meta-data
+70            android:name="com.google.android.geo.API_KEY"
+71            android:value="" />
+72
+73        <provider
+73-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:13:9-21:20
+74            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+74-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-82
+75            android:authorities="com.centinell.maslindapp.flutter.image_provider"
+75-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-74
+76            android:exported="false"
+76-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-37
+77            android:grantUriPermissions="true" >
+77-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-47
+78            <meta-data
+78-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-20:75
+79                android:name="android.support.FILE_PROVIDER_PATHS"
+79-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:19:17-67
+80                android:resource="@xml/flutter_image_picker_file_paths" />
+80-->[:image_picker] C:\Users\jlopez\StudioProjects\maslindapp\build\image_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:20:17-72
+81        </provider>
+82
+83        <uses-library
+83-->[androidx.window:window:1.0.0-beta04] C:\Users\jlopez\.gradle\caches\transforms-3\6c0248871a11733f9c854e908ae7f76f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+84            android:name="androidx.window.extensions"
+84-->[androidx.window:window:1.0.0-beta04] C:\Users\jlopez\.gradle\caches\transforms-3\6c0248871a11733f9c854e908ae7f76f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+85            android:required="false" />
+85-->[androidx.window:window:1.0.0-beta04] C:\Users\jlopez\.gradle\caches\transforms-3\6c0248871a11733f9c854e908ae7f76f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+86        <uses-library
+86-->[androidx.window:window:1.0.0-beta04] C:\Users\jlopez\.gradle\caches\transforms-3\6c0248871a11733f9c854e908ae7f76f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+87            android:name="androidx.window.sidecar"
+87-->[androidx.window:window:1.0.0-beta04] C:\Users\jlopez\.gradle\caches\transforms-3\6c0248871a11733f9c854e908ae7f76f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+88            android:required="false" /> <!-- Needs to be explicitly declared on P+ -->
+88-->[androidx.window:window:1.0.0-beta04] C:\Users\jlopez\.gradle\caches\transforms-3\6c0248871a11733f9c854e908ae7f76f\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+89        <uses-library
+89-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\jlopez\.gradle\caches\transforms-3\e46a318ffbc75b42c560c1e26eb1ab0c\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
+90            android:name="org.apache.http.legacy"
+90-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\jlopez\.gradle\caches\transforms-3\e46a318ffbc75b42c560c1e26eb1ab0c\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:40:13-50
+91            android:required="false" />
+91-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\jlopez\.gradle\caches\transforms-3\e46a318ffbc75b42c560c1e26eb1ab0c\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:41:13-37
+92
+93        <activity
+93-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\jlopez\.gradle\caches\transforms-3\683c1f45f9a5471caa9357831571743e\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+94            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+94-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\jlopez\.gradle\caches\transforms-3\683c1f45f9a5471caa9357831571743e\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+95            android:exported="false"
+95-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\jlopez\.gradle\caches\transforms-3\683c1f45f9a5471caa9357831571743e\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+96            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+96-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\jlopez\.gradle\caches\transforms-3\683c1f45f9a5471caa9357831571743e\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+97
+98        <meta-data
+98-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\jlopez\.gradle\caches\transforms-3\c6f5e8f8e2017a45585ae218135a666d\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+99            android:name="com.google.android.gms.version"
+99-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\jlopez\.gradle\caches\transforms-3\c6f5e8f8e2017a45585ae218135a666d\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+100            android:value="@integer/google_play_services_version" />
+100-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\jlopez\.gradle\caches\transforms-3\c6f5e8f8e2017a45585ae218135a666d\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+101    </application>
+102
+103</manifest>

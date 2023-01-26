@@ -8,12 +8,12 @@
         "source": "C:\\Users\\jlopez\\StudioProjects\\maslindapp\\android\\app\\src\\main\\res\\drawable-v21\\launch_background.xml"
     },
     {
-        "merged": "C:\\Users\\jlopez\\StudioProjects\\maslindapp\\build\\app\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\jlopez\\StudioProjects\\maslindapp\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\jlopez\\StudioProjects\\maslindapp\\build\\app\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\jlopez\\StudioProjects\\maslindapp\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\jlopez\\StudioProjects\\maslindapp\\build\\app\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\jlopez\\StudioProjects\\maslindapp\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\jlopez\\StudioProjects\\maslindapp\\build\\app\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",

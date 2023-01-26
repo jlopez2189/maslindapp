@@ -24,6 +24,10 @@ class SalonOrdersListController {
     Navigator.pushNamed(context, 'salon/categories/create');
   }
 
+  void gotoStoresCreate() {
+    Navigator.pushNamed(context, 'salon/stores/create');
+  }
+
   void gotoProductsCreate() {
     Navigator.pushNamed(context, 'salon/products/create');
   }
