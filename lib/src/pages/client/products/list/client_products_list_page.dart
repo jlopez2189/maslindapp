@@ -16,13 +16,13 @@ class _ClientProductsListPageState extends State<ClientProductsListPage> {
   ClientProductsListController _con =  new ClientProductsListController();
 
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
-      _con.init(context, refresh);
-    });
-  }
+ /// void initState() {
+ ///   // TODO: implement initState
+ ///   super.initState();
+ ///   SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+ ///     _con.init(context, refresh);
+  ///  });
+ /// }
 
   @override
   Widget build(BuildContext context) {
@@ -316,6 +316,11 @@ class _ClientProductsListPageState extends State<ClientProductsListPage> {
             onTap: _con.goToUpdatePage,
             title: Text('Editar Perfil'),
             trailing: Icon(Icons.edit_outlined),
+          ),
+          ListTile(
+            onTap: _con.goToStores,
+            title: Text('Tiendas'),
+            trailing: Icon(Icons.store_mall_directory),
           ),
           ListTile(
             title: Text('Mis pedidos'),

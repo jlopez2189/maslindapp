@@ -8,6 +8,7 @@ import 'package:maslindapp/src/models/user.dart';
 import 'package:maslindapp/src/provider/users_provider.dart';
 import 'package:maslindapp/src/utils/my_snackbar.dart';
 import 'package:sn_progress_dialog/progress_dialog.dart';
+
 class RegisterController {
   BuildContext context;
   TextEditingController emailController =  new TextEditingController();
@@ -83,8 +84,8 @@ class RegisterController {
       MySnackbar.show(context, responseApi.message);
 
       if(responseApi.success) {
-        Future.delayed(Duration(seconds: 3), (){
-          Navigator.pushReplacementNamed(context, 'login');
+        Future.delayed(Duration(seconds: 2), (){
+          Navigator.pushReplacementNamed(context,'login');
         });
       }
       else

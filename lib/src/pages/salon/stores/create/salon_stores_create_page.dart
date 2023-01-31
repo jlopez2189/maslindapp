@@ -1,9 +1,9 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:maslindapp/src/pages/salon/stores/create/salon_stores_create_controller.dart';
-import 'package:maslindapp/src/utils/my_colors.dart';
+import 'package:maslindapp/src/models/category.dart';
+import 'package:maslindapp/src/pages/client/stores/create/salon_stores_create_controller.dart';
+
 class SalonStoresCreatePage  extends StatefulWidget {
   const SalonStoresCreatePage ({Key key}) : super(key: key);
 
@@ -27,11 +27,11 @@ class _SalonStoresCreatePageState extends State<SalonStoresCreatePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.amber,
+        backgroundColor: Color(0xff6E0643),
         title: Text(
             'Nueva Tienda',
              style: TextStyle(
-               color: Colors.black,
+               color: Colors.white,
                fontWeight: FontWeight.bold
              ),
         ),
@@ -55,6 +55,7 @@ class _SalonStoresCreatePageState extends State<SalonStoresCreatePage> {
               ),
             ),
           ),
+          _dropDownCategorias(_con.categories),
         ],
       ),
       bottomNavigationBar: _buttonCreate() ,
@@ -140,6 +141,84 @@ class _SalonStoresCreatePageState extends State<SalonStoresCreatePage> {
           width: MediaQuery.of(context).size.width * 0.20,
           child: Image(
             image: AssetImage('assets/img/add_image.png'),
+          ),
+        ),
+      ),
+    );
+  }
+
+  List<DropdownMenuItem<String>> _dropDownItems(List<Category> categories){
+    List<DropdownMenuItem<String>> list = [];
+    categories.forEach((category) {
+      list.add(DropdownMenuItem(
+        child: Text(category.name),
+        value: category.id,
+      ));
+    });
+    return list;
+  }
+
+
+  Widget _dropDownCategorias(List<Category> categories) {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 33),
+      child: Material(
+        elevation: 2.0,
+        color: Colors.white,
+        borderRadius: BorderRadius.all(Radius.circular(5)),
+        child: Container(
+          padding: EdgeInsets.all(3),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Icon(
+                    Icons.search,
+                    color: Colors.black,
+                  ),
+                  SizedBox(width: 15),
+                  Text(
+                    'Categorias',
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16
+                    ),
+                  )
+                ],
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: DropdownButton(
+                  underline: Container(
+                    alignment: Alignment.centerRight,
+                    child: Icon(
+                      Icons.arrow_drop_down_circle,
+                      color: Colors.black,
+                    ),
+                  ),
+                  elevation: 3 ,
+                  isExpanded: true,
+                  hint: Text(
+                    'Selecciona una Categoria',
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 16
+                    ),
+                  ),
+                  items: _dropDownItems(categories),
+                  value: _con.idCategory,
+                  onChanged: (opcion) {
+                    setState(() {
+                      print('Categoria seleccionada $opcion');
+                      _con.idCategory = opcion; // Estableciendo el valor seleccionado a la variable idcategory
+                    });
+                  },
+                ),
+
+              ),
+
+
+            ],
           ),
         ),
       ),

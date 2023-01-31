@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:maslindapp/src/pages/login/login_page.dart';
 
 import 'login_screen.dart';
 
@@ -29,7 +30,8 @@ class StartState extends State<SplashScreen> {
 
   route() {
     Navigator.pushReplacement(context, MaterialPageRoute(
-      builder: (context) => LoginScreen()
+   //  builder: (context) => LoginScreen()
+      builder: (context) => LoginPage()
     ));
   }
 

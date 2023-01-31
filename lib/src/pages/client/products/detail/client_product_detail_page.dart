@@ -3,8 +3,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:maslindapp/src/models/product.dart';
 import 'package:maslindapp/src/pages/client/products/detail/client_product_detail_controller.dart';
-import 'package:maslindapp/src/utils/my_colors.dart';
-
 
 class ClientProductDetailPage extends StatefulWidget {
   Product product;

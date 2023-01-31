@@ -38,7 +38,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         backgroundImage: _con.imageFile != null
             ? FileImage(_con.imageFile)
             : AssetImage('assets/img/user_profile_2.png'),
-        radius: 60,
+        radius: 65,
         backgroundColor: Colors.grey[200],
       ),
     );
@@ -46,13 +46,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   Widget initWidget() {
     return Scaffold(
+
         body: SingleChildScrollView(
             child: Column(
-               children: [
+                  children: [
                   Container(
-                  height: 250,
+                  height: 260,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(90)),
+                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(110)),
                     color: new Color(0xff020202),
                     gradient: LinearGradient(colors: [(new  Color(0xff020202)), new Color(0xff020202)],
                       begin: Alignment.topCenter,
@@ -64,25 +65,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-
-                          Container(
-                            margin: EdgeInsets.only(top: 50),
+                           Container(
+                            margin: EdgeInsets.only(top: 40),
                             child: Image.asset(
                               "assets/img/Logomaslinda.png",
                               height: 200,
-                              width: 220,
+                              width: 200,
                             ),
                           ),
-                    ],
+
+                       ],
                       )
+
                   ),
+
                 ),
+
+                SizedBox(height: 20,),
 
                 _imageUserProfile(),
 
                 Container(
                   alignment: Alignment.center,
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 40),
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 25),
                   padding: EdgeInsets.only(left: 20, right: 20),
                   height: 54,
                   decoration: BoxDecoration(

@@ -2,9 +2,11 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:maslindapp/src/models/category.dart';
 import 'package:maslindapp/src/models/response_api.dart';
 import 'package:maslindapp/src/models/stores.dart';
 import 'package:maslindapp/src/models/user.dart';
+import 'package:maslindapp/src/provider/categories_provider.dart';
 import 'package:maslindapp/src/provider/stores_provider.dart';
 import 'package:maslindapp/src/utils/my_snackbar.dart';
 import 'package:maslindapp/src/utils/shared_pref.dart';
@@ -18,8 +20,12 @@ class SalonStoresCreateController {
   TextEditingController shopController =  new TextEditingController();
   TextEditingController descripcionController =  new TextEditingController();
   StoresProvider _storesProvider =  StoresProvider();
+  CategoriesProvider _categoriesProvider =  new CategoriesProvider();
   User user;
   SharedPref sharedPref =  SharedPref();
+  List<Category> categories = [];
+
+  String idCategory;
   /// IMAGENES
   PickedFile pickedFile;
   File imageFile1;
@@ -34,6 +40,14 @@ class SalonStoresCreateController {
     _progressDialog = new ProgressDialog(context: context);
     user = User.fromJson(await sharedPref.read('user'));
     _storesProvider.init(context, user);
+    _categoriesProvider.init(context, user);
+    getCategories();
+  }
+
+  /// llamado de la combobok categorias
+  void getCategories() async {
+    categories = await _categoriesProvider.getAll();
+    refresh();
   }
 
 
@@ -50,10 +64,17 @@ class SalonStoresCreateController {
       return;
     }
 
+    //validacion de catalogo de categorias
+    if (idCategory == null) {
+      MySnackbar.show(context, 'Selecciona una categoria para el producto');
+      return;
+    }
+
 
     Stores stores = new Stores(
         shop: name,
         description: descripcion,
+        idCategory: int.parse(idCategory)
     );
 
     List<File> images = [];
@@ -70,12 +91,6 @@ class SalonStoresCreateController {
     print('Respuesta: ${responseApi.toJson()}');
     MySnackbar.show(context, responseApi.message);
 
-    //_progressDialog.show(max: 100, msg: 'Espere un momento');
-    //Stream stream = await _storesProvider.create(stores, images);
-   // stream.listen((res) {
-    //  _progressDialog.close();
-     // ResponseApi responseApi = ResponseApi.fromJson(json.decode(res));
-    //  MySnackbar.show(context, responseApi.message);
       if (responseApi.success) {
         ///resetValues();
         shopController.text = '';
@@ -83,6 +98,7 @@ class SalonStoresCreateController {
         imageFile1 = null;
         imageFile2 = null;
         imageFile3 = null;
+        idCategory = null;
         refresh();
       }
     });
@@ -95,6 +111,7 @@ class SalonStoresCreateController {
     imageFile1 = null;
     imageFile2 = null;
     imageFile3 = null;
+    idCategory = null;
     refresh();
   }
 

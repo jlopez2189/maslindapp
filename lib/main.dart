@@ -4,16 +4,19 @@ import 'package:maslindapp/src/pages/client/address/list/client_address_list_pag
 import 'package:maslindapp/src/pages/client/address/map/client_address_map_page.dart';
 import 'package:maslindapp/src/pages/client/orders/create/client_order_create_page.dart';
 import 'package:maslindapp/src/pages/client/products/list/client_products_list_page.dart';
+import 'package:maslindapp/src/pages/client/stores/list/salon_stores_list_page.dart';
 import 'package:maslindapp/src/pages/client/update/client_update_page.dart';
 import 'package:maslindapp/src/pages/delivery/orders/list/delivery_orders_list_page.dart';
 import 'package:maslindapp/src/pages/login/login_page.dart';
+import 'package:maslindapp/src/pages/login/signup_screen.dart';
 import 'package:maslindapp/src/pages/login/splash_screen.dart';
 import 'package:maslindapp/src/pages/register/register_page.dart';
 import 'package:maslindapp/src/pages/roles/roles_page.dart';
 import 'package:maslindapp/src/pages/salon/categories/create/salon_categories_create_page.dart';
 import 'package:maslindapp/src/pages/salon/orders/list/salon_orders_list_page.dart';
 import 'package:maslindapp/src/pages/salon/products/create/salon_products_create_page.dart';
-import 'package:maslindapp/src/pages/salon/stores/create/salon_stores_create_page.dart';
+import 'package:maslindapp/src/pages/client/stores/create/salon_stores_create_page.dart';
+import 'package:maslindapp/src/pages/client/stores/list/salon_stores_list_page.dart';
 import 'package:maslindapp/src/utils/my_colors.dart';
 
 void main() {
@@ -37,17 +40,20 @@ class _MyAppState extends State<MyApp> {
      routes: {
        ///'login' : (BuildContext context) => LoginPage(),
        'login' : (BuildContext context) => SplashScreen(),
+       ///'register' : (BuildContext context) => SignUpScreen(),
        'register' : (BuildContext context) => RegisterPage(),
        'roles' : (BuildContext context) => RolesPage(),
-       'client/products/list' : (BuildContext context) => ClientProductsListPage(),
+       'client/stores/list' : (BuildContext context) => SalonStoresListPage(),
        'client/update' : (BuildContext context) => ClientUpdatePage(),
        'client/orders/create' : (BuildContext context) => ClientOrdersCreatePage(),
        'client/address/list' : (BuildContext context) => ClientAddressListPage(),
        'client/address/create' : (BuildContext context) => ClientAddressCreatePage(),
        'client/address/map' : (BuildContext context) => ClientAddressMapPage(),
        'salon/orders/list' : (BuildContext context) => SalonOrdersListPage(),
+       'salon/stores/list' : (BuildContext context) => SalonStoresListPage(),
        'salon/categories/create' : (BuildContext context) => SalonCategoriesCreatePage(),
        'salon/stores/create' : (BuildContext context) => SalonStoresCreatePage(),
+       'client/stores/create' : (BuildContext context) => SalonStoresCreatePage(),
        'salon/products/create' : (BuildContext context) => SalonProductsCreatePage(),
        'delivery/orders/list' : (BuildContext context) => DeliveryOrdersListPage()
      },

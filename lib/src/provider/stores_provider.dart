@@ -21,10 +21,10 @@ class StoresProvider {
     this.sessionUser = sessionUser;
   }
 
-  Future<List<Stores>> getAll() async {
+  Future<List<Stores>> getByCategory(String idCategory ) async {
     try
     {
-      Uri url = Uri.http(_url,'$_api/getAll');
+      Uri url = Uri.http(_url,'$_api/findByCategory/$idCategory');
       Map<String, String> headers = {
         'Content-type': 'application/json',
         'Authorization': sessionUser.sessionToken
@@ -45,6 +45,7 @@ class StoresProvider {
       return [];
     }
   }
+
 
   Future<Stream> create(Stores stores, List<File> images) async {
     try

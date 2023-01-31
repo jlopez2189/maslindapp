@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:maslindapp/src/models/rol.dart';
 import 'package:maslindapp/src/pages/roles/roles_controller.dart';
+
+
 class RolesPage extends StatefulWidget {
   const RolesPage({Key key}) : super(key: key);
 
@@ -26,13 +28,14 @@ class _RolesPageState extends State<RolesPage> {
     return  Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.amber,
+        backgroundColor:Color(0xff6E0643),
         title: Text(
           'Selecciona un Rol',
            style: TextStyle(
-             color: Colors.black,
+             //color: Colors.black,
+             color:  Color(0xffEEEEEE),
              fontWeight: FontWeight.bold,
-
+             fontSize: 18,
            ),
         ),
       ),
@@ -71,7 +74,7 @@ class _RolesPageState extends State<RolesPage> {
            style: TextStyle(
              fontSize: 17,
              fontFamily: 'Roboto',
-             color: Colors.black
+             color: Color(0xff6E0643),
            ),
          ),
          SizedBox(height: 25),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:maslindapp/src/pages/login/login_controller.dart';
 import 'package:maslindapp/src/pages/login/signup_screen.dart';
+import 'package:maslindapp/src/pages/register/register_page.dart';
 ///import 'package:login_ui_design/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -208,7 +209,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SignUpScreen(),
+                          //builder: (context) => SignUpScreen(),
+                           builder: (context) => RegisterPage(),
                         )
                       );
                     },

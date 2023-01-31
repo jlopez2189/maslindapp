@@ -22,9 +22,12 @@ class _SalonOrdersListPageState extends State<SalonOrdersListPage> {
   }
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       key: _con.key,
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor:Color(0xff6E0643),
         leading: _menudrawer(),
       ),
       drawer: _drawer(),
@@ -39,18 +42,19 @@ class _SalonOrdersListPageState extends State<SalonOrdersListPage> {
       child: Container(
         margin: EdgeInsets.only(left: 20) ,
         alignment: Alignment.centerLeft,
-        child: Image.asset('assets/img/menuredondeado.png', width: 20, height: 20),
+        child: Image.asset('assets/img/menuredondeado.png', width: 20, height: 20,  color: Colors.white),
       ),
     );
   }
   Widget _drawer() {
     return Drawer(
+      backgroundColor: Color(0xff6E0643),
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
               decoration: BoxDecoration(
-                  color: Colors.black54
+                  color: Colors.white
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +72,7 @@ class _SalonOrdersListPageState extends State<SalonOrdersListPage> {
                     _con.user?.email ?? '',
                     style: TextStyle(
                         fontSize: 13,
-                        color: Colors.grey[200],
+                        color: Colors.blue,
                         fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic
                     ),
@@ -78,15 +82,15 @@ class _SalonOrdersListPageState extends State<SalonOrdersListPage> {
                     _con.user?.phone ?? '',
                     style: TextStyle(
                         fontSize: 13,
-                        color: Colors.grey[200],
+                        color: Colors.red,
                         fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic
                     ),
                     maxLines: 1,
                   ),
                   Container(
-                    height: 60,
-                    margin: EdgeInsets.only(top: 10),
+                    height: 70,
+                    margin: EdgeInsets.only(top: 5),
                     child: FadeInImage(
                       image: _con.user?.image != null
                           ? NetworkImage(_con.user?.image)
@@ -101,32 +105,56 @@ class _SalonOrdersListPageState extends State<SalonOrdersListPage> {
           ),
           ListTile(
             onTap: _con.gotoStoresCreate,
-            title: Text('Crear Tienda'),
-            trailing: Icon(Icons.store),
+            title: Text(
+                'Crear Tienda',
+              style: TextStyle(
+                color: Colors.white,
+              ) ,
+            ),
+            trailing: Icon(Icons.store,color: Colors.white,),
           ),
           ListTile(
             onTap: _con.gotoCategoriesCreate,
-            title: Text('Crear Categoria'),
-            trailing: Icon(Icons.list_alt),
+            title: Text(
+                'Crear Categoria',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+            trailing: Icon(Icons.list_alt,color: Colors.white,),
           ),
           ListTile(
             onTap: _con.gotoProductsCreate,
-            title: Text('Crear Producto'),
-            trailing: Icon(Icons.production_quantity_limits),
+            title: Text(
+                'Crear Producto',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+            trailing: Icon(Icons.production_quantity_limits,color: Colors.white,),
           ),
           _con.user != null ?
           _con.user.roles.length > 1 ?
           ListTile(
             onTap: _con.gotoRoles,
-            title: Text('Seleccionar rol'),
-            trailing: Icon(Icons.person_outline),
+            title: Text(
+                'Seleccionar rol',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+            trailing: Icon(Icons.person_outline,color: Colors.white,),
           ) : Container() :Container(),
           ListTile(
             onTap: _con.logout,
-            title: Text('Cerrar session'),
-            trailing: Icon(Icons.power_settings_new),
+            title: Text(
+                'Cerrar session',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+            trailing: Icon(Icons.power_settings_new,color: Colors.white,),
           ),
-
         ],
       ),
     );

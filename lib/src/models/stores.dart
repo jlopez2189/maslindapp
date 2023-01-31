@@ -11,6 +11,9 @@ class Stores {
   String image1;
   String image2;
   String image3;
+  int idCategory;
+  int idService;
+  int condition;
   List<Stores> toList = [];
   Stores({
      this.id,
@@ -19,6 +22,9 @@ class Stores {
      this.image1,
      this.image2,
      this.image3,
+     this.idCategory,
+     this.idService,
+     this.condition,
   });
 
   factory Stores.fromJson(Map<String, dynamic> json) => Stores(
@@ -28,6 +34,9 @@ class Stores {
     image1: json["image1"],
     image2: json["image2"],
     image3: json["image3"],
+    idCategory: json["id_category"] is String ? int.parse(json["id_category"]) : json["id_category"],
+    idService: json["id_service"] is String ? int.parse(json["id_service"]) : json["id_service"],
+    condition: json["condition"],
   );
 
   Stores.fromJsonList(List<dynamic> jsonList) {
@@ -45,6 +54,9 @@ class Stores {
     "image1": image1,
     "image2": image2,
     "image3": image3,
+    "id_category": idCategory,
+    "id_service": idService,
+    "condition": condition,
   };
 
   static bool isInteger(num value) => value is int || value == value.roundToDouble();
